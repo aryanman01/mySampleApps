@@ -1,0 +1,60 @@
+@media (min-width: 500px){
+	.responsive{
+		display: inline-block;
+		width: 200px;
+		border: 1px solid black; 
+	}
+}
+
+@media (min-width: 800px){
+	.responsive{
+		display: inline-block;
+		width: 400px;
+		border: 1px solid red;
+	}
+}
+
+h1{
+	/*For a red background*/
+	background: red;
+	/*Setting the font color to white*/
+	color: white;
+	/*Setting the alignment*/
+	text-align: center;
+}
+
+
+@media (min-width: 1000px){
+	body{
+		background: green;
+	}
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+h1{
+	font-family: serif;
+	font-size: 50pt;
+}
+
+a:hover{
+	color: black;
+	background: white;
+	text-decoration: none;
+}
+
+.greenlink:hover {
+	color: green;
+	background: gray;
+}
+
+.indent {
+	margin-left: 10px;
+}
+
+.gap_below {
+	margin-bottom: 20px;
+}

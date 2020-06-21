@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+</head>
+<body>
+	<a href="index.html">Home</a> &nbsp
+	<a href="aboutMe.html">About me</a> &nbsp
+	<a href="contact.html" class="chacha cha">Contact</a>
+	<hr>
+
+	<div class="responsive">column 1</div>
+	<div class="responsive">column 2</div>
+	<h2 id="title" onclick="hello();">Hello</h2>
+	<div class="container">
+		Image Gallery
+		<div class="row">
+			<div class="col-md-3">
+				<img id="image1" class="crop-img" src="img_1.jpg" alt="1st image"/>
+			</div>
+			<div class="col-md-3">
+				<img id="image2" class="crop-img" src="img_2.jpg" alt="2nd image"/>
+			</div>
+			<div class="col-md-3">
+				<img id="image3" class="crop-img" src="img_3.jpg" alt="3rd image"/>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-1">
+				<button id="backward">&lt;</button>
+			</div>
+			<div class="col-md-10">
+				<img id="bigImg" class="large-img" src="img_1.jpg" alt="1st image"/>
+			</div>
+			<div class="col-md-1">
+				<button id="forward">&gt;</button>
+			</div>
+			
+		</div>
+	</div>
+
+	<h1>Ankit Aryan</h1>
+
+	<h2>Aryan Man</h2>
+
+	<p class="gap_below"><span  class="indent">The</span> Paragraph 1</p>
+	<p>Paragraph 2</p>
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+
+	<script type="text/javascript">
+		$(".crop-img").click(function(){
+			$("#bigImg").attr('src',
+				$(this).attr('src'));
+		});
+
+		var counter=1;
+		$("#image"+counter).click();
+
+		$("#backward").click(function(){
+			counter=counter-1;
+			if(counter<1){
+				counter=3;
+			}
+			$("image"+counter).click();
+		});
+		$("#forward").click(function(){
+			counter=counter+1;
+			if(counter>3){
+				counter=1;
+			}
+			$("image"+counter).click();
+		});
+	</script>
+<!-- 
+<script type="text/javascript">
+	alert($("#title").html());
+
+</script> -->
+</body>
+</html>
